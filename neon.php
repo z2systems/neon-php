@@ -25,7 +25,7 @@ class Neon
     curl_setopt($ch,CURLOPT_POST, TRUE);
     curl_setopt($ch,CURLOPT_POSTFIELDS, $parameters);
     curl_setopt($ch,CURLOPT_RETURNTRANSFER, TRUE);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // Required for WAMP only
+    //curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // Required for WAMP only
     $result = curl_exec($ch);
     curl_close($ch);
     $result = json_decode($result, TRUE);
