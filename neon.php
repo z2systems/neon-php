@@ -79,8 +79,12 @@ class Neon
    * General purpose API request to be executed after login
    */
   public function go($request) {
-    if (is_array($request)) {
-      $str = http_build_query($request['parameters']);
+    if (isset($request['method'])) {
+      if (isset($request['parameters'])) {
+        $str = http_build_query($request['parameters']);
+        } else { 
+        $str = null; 
+        }
       $addon = 'responseType=json&userSessionId=' . $this->getSession() . '&';
       $parameters = $addon . $str;
       $build = array();
