@@ -47,7 +47,7 @@ This method greatly reduces the effort necessary to build search queries and ite
 * listAccounts
 * listDonations
 * listEvents
-* listMembers
+* listMemberships
 
 It expects a different format of array from the Neon->go() method, as this type of API request is more complex.
 This is the format for this type of request:
