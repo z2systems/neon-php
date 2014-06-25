@@ -80,13 +80,11 @@ class Neon
    */
   public function go($request) {
     if (isset($request['method'])) {
+      $str = null;
       if (isset($request['parameters'])) {
         $str = http_build_query($request['parameters']);
-        } else { 
-        $str = null; 
         }
-      $addon = 'responseType=json&userSessionId=' . $this->getSession() . '&';
-      $parameters = $addon . $str;
+      $parameters = 'responseType=json&userSessionId=' . $this->getSession() . '&' . $str;
       $build = array();
       $build['method'] = $request['method'];
       $build['parameters'] = $parameters;
