@@ -44,10 +44,10 @@ $result = $neon->go($request);
 ```
 ###search() - List Requests
 This method greatly reduces the effort necessary to build search queries and iterate through the results. It works with the following API methods:
-* listAccounts
-* listDonations
-* listEvents
-* listMemberships
+* [listAccounts](http://help.neoncrm.com/api/rest/account/listAccounts)
+* [listDonations](http://help.neoncrm.com/node/174)
+* [listEvents](http://help.neoncrm.com/api/rest/events/listEvents)
+* [listMemberships](http://help.neoncrm.com/node/181)
 
 It expects a different format of array from the go() method, as this type of API request is more complex.
 This is the format for this type of request:
