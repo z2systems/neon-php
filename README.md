@@ -21,7 +21,7 @@ The following class methods are available for use:
 * search
 
 ###login() - Server Authentication
-This is necessary to make any subsequent requests through the API. Authentication is done using an orgId and an API key. More information about obtaining these can be found at http://help.neoncrm.com/api
+This is necessary to make any subsequent requests through the API. Authentication is done using an orgId and an API key. More information about obtaining these can be found at http://help.neoncrm.com/api/keys
 ```PHP
 $keys = array(
   'orgId'=>'myorg', 
