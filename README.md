@@ -49,7 +49,7 @@ This method greatly reduces the effort necessary to build search queries and ite
 * listEvents
 * listMemberships
 
-It expects a different format of array from the Neon->go() method, as this type of API request is more complex.
+It expects a different format of array from the go() method, as this type of API request is more complex.
 This is the format for this type of request:
 ```PHP
 $search = array( 
@@ -69,5 +69,5 @@ $search = array(
     'sortDirection' => 'ASC',
   ),
 );
-$neon->search($search);
+$result = $neon->search($search);
 ```
