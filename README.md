@@ -31,7 +31,7 @@ $neon->login($keys);
 ```
 On the successful completion of this request, a Neon API session ID will be stored as a session variable. The library will automatically add this to subsequent requests. The session ID expires after 30 minutes of inactivity.
 ###go() - API Request
-This method is used to make a general API request. All methods described in the REST API documentation (http://help.neoncrm.com/api/rest) will work. This method expect a structured associative array as an argument. It follows this format:
+This method is used to make a general API request. All methods described in the REST API documentation (http://help.neoncrm.com/api/rest) will work. This method expects a structured associative array as an argument. It follows this format:
 ```PHP
 $request = array( 
   'method' => 'common/listCustomFields', 
