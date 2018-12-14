@@ -84,7 +84,16 @@ class Neon
       if (isset($request['parameters'])) {
         $str = http_build_query($request['parameters']);
         }
-      $parameters = 'responseType=json&userSessionId=' . $this->getSession() . '&' . $str;
+
+      $repeating = null;
+      if (isset($request['repeatingParameters'])){
+        foreach( $request['repeatingParameters'] as $group ){
+          $repeating .= http_build_query( $group );
+          $repeating .= '&';
+        }
+      }
+      $parameters = 'responseType=json&userSessionId=' . $this->getSession() . '&' . $str . '&' . $repeating;
+
       $build = array();
       $build['method'] = $request['method'];
       $build['parameters'] = $parameters;
